@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Analisis AI Generatif dalam Industri Kreatif Indonesia 2024</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      background: #fff;
+    }
+    table, th, td {
+      border: 1px solid #bbb;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+    }
+    th {
+      background-color: #2980b9;
+      color: white;
+    }
+    .chart-container {
+      width: 100%;
+      margin: 40px 0;
+    }
+    .insight {
+      background: #ecf0f1;
+      padding: 20px;
+      border-left: 5px solid #3498db;
+      margin-bottom: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Analisis Penggunaan AI Generatif di Industri Kreatif Indonesia 2024</h1>
+
+  <h2>1. Tren Pemanfaatan AI per Subsektor</h2>
+  <div class="chart-container">
+    <canvas id="aiUsageChart"></canvas>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Subsektor</th>
+        <th>Persentase Penggunaan AI (%)</th>
+        <th>Tool Populer</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Desain Grafis</td>
+        <td>72%</td>
+        <td>Midjourney, DALL·E</td>
+      </tr>
+      <tr>
+        <td>Penulisan Konten</td>
+        <td>65%</td>
+        <td>ChatGPT, Jasper</td>
+      </tr>
+      <tr>
+        <td>Musik dan Audio</td>
+        <td>48%</td>
+        <td>Soundraw, Amper</td>
+      </tr>
+      <tr>
+        <td>Video & Animasi</td>
+        <td>53%</td>
+        <td>Runway ML, Synthesia</td>
+      </tr>
+      <tr>
+        <td>Fotografi & Editing</td>
+        <td>42%</td>
+        <td>Photoshop AI, Luminar</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>2. Dampak terhadap Pelaku Industri</h2>
+  <div class="insight">
+    <strong>Positif:</strong> 
+    <ul>
+      <li>Peningkatan produktivitas hingga 40% dalam proses kreatif.</li>
+      <li>Hemat biaya produksi konten hingga 30%.</li>
+      <li>Memungkinkan individu mengakses kemampuan profesional dengan cepat.</li>
+    </ul>
+  </div>
+
+  <div class="insight">
+    <strong>Negatif:</strong> 
+    <ul>
+      <li>Ancaman terhadap lapangan kerja manual (misalnya ilustrator lepas).</li>
+      <li>Isu plagiarisme dan hak cipta atas karya yang dihasilkan AI.</li>
+      <li>Kesenjangan teknologi antara pelaku besar dan kecil.</li>
+    </ul>
+  </div>
+
+  <h2>3. Rekomendasi Strategis</h2>
+  <ol>
+    <li>Mendorong kolaborasi antara AI dan kreator manusia melalui pelatihan dan literasi AI.</li>
+    <li>Merumuskan regulasi etis dan perlindungan hak cipta AI generatif.</li>
+    <li>Memberikan insentif teknologi untuk pelaku UMKM kreatif agar tidak tertinggal.</li>
+    <li>Pengembangan platform nasional AI kreatif berbasis lokal dan budaya Indonesia.</li>
+  </ol>
+
+  <h2>4. Kesimpulan</h2>
+  <p>
+    AI generatif telah menjadi bagian integral dalam transformasi industri kreatif Indonesia tahun 2024. 
+    Penggunaan AI mendorong efisiensi dan kreativitas, namun tetap perlu pendekatan strategis untuk memastikan bahwa 
+    dampaknya tidak merugikan keberlangsungan kerja kreator manusia.
+  </p>
+
+  <script>
+    const ctx = document.getElementById('aiUsageChart').getContext('2d');
+    const aiUsageChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Desain Grafis', 'Penulisan Konten', 'Musik & Audio', 'Video & Animasi', 'Fotografi & Editing'],
+        datasets: [{
+          label: 'Penggunaan AI (%)',
+          data: [72, 65, 48, 53, 42],
+          backgroundColor: [
+            '#3498db',
+            '#2ecc71',
+            '#f1c40f',
+            '#9b59b6',
+            '#e67e22'
+          ],
+          borderRadius: 8
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(context) {
+                return context.parsed.y + '%';
+              }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+            title: {
+              display: true,
+              text: 'Persentase Penggunaan (%)'
+            }
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
